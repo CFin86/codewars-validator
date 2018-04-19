@@ -2,8 +2,10 @@
   "name": "codewars-validator",
   "version": "1.0.2",
   "description": "Beginnings of a tool for TrueCoders",
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
+    "start": "npm run build && nodemon lib/index.js",
+    "build": "babel src -d lib",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Chris M. Finney",
@@ -13,6 +15,7 @@
     "express": "^4.16.3",
     "mysql": "^2.15.0",
     "node": "^9.11.0",
+    "nodemon": "^1.17.3",
     "request": "^2.85.0"
   },
   "devDependencies": {
